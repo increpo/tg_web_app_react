@@ -2,9 +2,9 @@ import './App.css';
 const tg = window.Telegram.WebApp; //переменные с https://core.telegram.org/bots/webapps
 
 function App() {
-    useEffect( () => {
-        tg.ready();
-    }, []);
+    // useEffect( () => {
+    //     tg.ready();
+    // }, []);
 
     const onClose = () => {
         tg.close();
