@@ -1,0 +1,4 @@
+[[rediracts]]
+	from = '/*'
+	toi = '/index.html'
+	status = 200
