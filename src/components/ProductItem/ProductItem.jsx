@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
-import './ProductItem.css';
+import './ProductItem.css'
 
 const ProductItem = ({product, className, onAdd}) => {
 	const onAddHandler = () => {
@@ -13,9 +13,9 @@ const ProductItem = ({product, className, onAdd}) => {
 			<div className={'title'}>{product.title}</div>
 			<div className={'description'}>{product.description}</div>
 			<div className={'price'}>
-				<span>Price: <b>{prodcut.price}</b></span>
+				<span>Price: <b>{product.price}</b></span>
 			</div>
-			<Button className={'add-btn'} onClick={onAppHandler}>
+			<Button className={'add-btn'} onClick={onAddHandler}>
 				add to cart
 			</Button>
 		</div>
