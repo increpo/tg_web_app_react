@@ -1,14 +1,14 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './Form.css';
-import {useTelegram} from '../hooks/useTelegram';
+import {useTelegram} from '../../hooks/useTelegram';
 
 const Form = () => {
-	const [country, setCountry] = useState('country');
-	const [street, setStreet] = useState('street');
-	const [subject, setSubject] = useState('legal');
+	const [country, setCountry] = useState('');
+	const [street, setStreet] = useState('');
+	const [subject, setSubject] = useState('physical');
 	const {tg} = useTelegram();
 
-	const onSendData = useCallback(()=>{
+	const onSendData = useCallback( () => {
 		const data = {
 			country,
 			street,
@@ -17,12 +17,12 @@ const Form = () => {
 		tg.sendData(JSON.stringify(data));
 	}, [country, street, subject]);
 
-	useEffect(()=>{
+	useEffect( () => {
 		tg.onEvent('mainButtonClicked', onSendData);
 		return () => {
 			tg.offEvent('mainButtonClicked', onSendData);
 		}
-	}, []);
+	}, [onSendData]);
 
 	useEffect( () => {
 		tg.MainButton.setParams({
@@ -65,7 +65,7 @@ const Form = () => {
 				value={street}
 				onChange={onChangeStreet}
 			/>
-			<select name={'select'}
+			<select className={'select'}
 					value={subject}
 					onChange={onChangeSubject}
 			>

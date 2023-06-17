@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import {Route, Routes} from 'react-router-dom';
 import './App.css';
-import {useTelegram} from './components/hooks/useTelegram.js';
+import {useTelegram} from './hooks/useTelegram.js';
 import Header from './components/Header/Header.jsx';
 import ProductList from './components/ProductList/ProductList.jsx';
 import Form from './components/Form/Form.jsx';
