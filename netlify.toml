@@ -1,4 +1,4 @@
 [[rediracts]]
-	from = '/*'
-	toi = '/index.html'
+	from = "/*"
+	toi = "/index.html"
 	status = 200
