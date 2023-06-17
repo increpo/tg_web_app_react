@@ -1,36 +1,36 @@
 import React, {useState, useEffect} from 'react';
 import './Form.css';
-// import {useTelegram} from '../hooks/useTelegram';
+import {useTelegram} from '../hooks/useTelegram';
 
 const Form = () => {
-	// const [country, setCountry] = useState('');
-	// const [street, setStreet] = useState('');
-	// const [subject, setSubject] = useState('physical');
-	// const {tg} = useTelegram();
+	const [country, setCountry] = useState('');
+	const [street, setStreet] = useState('');
+	const [subject, setSubject] = useState('physical');
+	const {tg} = useTelegram();
 
-	// useEffect( () => {
-	// 	tg.MainButton.setParams({
-	// 		text: 'Send data'
-	// 	})
-	// }, [])
+	useEffect( () => {
+		tg.MainButton.setParams({
+			text: 'Send data'
+		})
+	}, [])
 
-	// useEffect( () => {
-	// 	if(!country || !street){
-	// 		tg.MainButton.hide();
-	// 	} else {
-	// 		tg.MainButton.show();
-	// 	}
-	// }, [country, street])
+	useEffect( () => {
+		if(!country || !street){
+			tg.MainButton.hide();
+		} else {
+			tg.MainButton.show();
+		}
+	}, [country, street])
 
-	// const onChangeCountry = (e) => {
-	// 	setCountry(e.target.value);
-	// }
-	// const onChangeStreet = (e) => {
-	// 	setStreet(e.target.value);
-	// }
-	// const onChangeSubject = (e) => {
-	// 	setSubject(e.target.value);
-	// }
+	const onChangeCountry = (e) => {
+		setCountry(e.target.value);
+	}
+	const onChangeStreet = (e) => {
+		setStreet(e.target.value);
+	}
+	const onChangeSubject = (e) => {
+		setSubject(e.target.value);
+	}
 
 	return (
 		<div className={'form'}>
@@ -39,19 +39,19 @@ const Form = () => {
 				className={'input'} 
 				type='text'
 				placeholder={'Country'}
-				// value={country}
-				// onChange={onChangeCountry}
+				value={country}
+				onChange={onChangeCountry}
 			/>
 			<input
 				className={'input'}
 				type='text'
 				placeholder={'Street'}
-				// value={street}
-				// onChange={onChangeStreet}
+				value={street}
+				onChange={onChangeStreet}
 			/>
 			<select name={'select'}
-					// value={subject}
-					// onChange={onChangeSubject}
+					value={subject}
+					onChange={onChangeSubject}
 			>
 				<option value={'physical'}>Physical person</option>
 				<option value={'legal'}>Legal person</option>
