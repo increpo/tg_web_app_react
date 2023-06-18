@@ -30,7 +30,6 @@ function App() {
                 fps={10}
                 qrbox={250}
                 disableFlip={false}
-                // qrCodeSuccessCallback={onNewScanResult}
             />
             <Routes>
                 <Route index element={<ProductList />}/>

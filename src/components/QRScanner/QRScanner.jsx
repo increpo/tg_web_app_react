@@ -1,4 +1,4 @@
-import { Html5QrcodeScanner } from 'html5-qrcode';
+import { Html5QrcodeScanner, Html5QrcodeScanType } from 'html5-qrcode';
 import { useEffect, useState } from 'react';
 
 const qrcodeRegionId = "html5qr-code-full-region";
@@ -28,7 +28,12 @@ const QRScanner = (props) => {
 
     useEffect(() => {
         // when component mounts
-        const config = createConfig(props);
+      	const settings = {
+      		rememberLastUsedCamera: true,
+      		// Only support camera scan type.
+        	supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
+    	}
+        const config = createConfig({...props, ...settings});
         const verbose = props.verbose === true;
         // Suceess callback is required.
         // if (!(props.qrCodeSuccessCallback)) {
