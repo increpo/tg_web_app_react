@@ -31,9 +31,9 @@ const QRScanner = (props) => {
       	const settings = {
       		rememberLastUsedCamera: true,
       		// Only support camera scan type.
-        	// supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
-        	// facingMode: "environment",
-        	// videoConstraints: { facingMode: { exact: "environment" } },
+        	supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
+        	facingMode: "environment",
+        	videoConstraints: { facingMode: { exact: "environment" } },
     	}
         const config = createConfig({...props, ...settings});
         const verbose = props.verbose === true;
@@ -98,11 +98,14 @@ const QRScanner = (props) => {
 		// });
 
 		html5QrCode.start(
-			{ facingMode: "environment" },
+			{
+				facingMode: "environment",
+				width: { min: 1280 },
+			},
 		  	config,
 		  	(decodedText, decodedResult) => {
-				  	// do something when code is read 
-			  	html5QrCode.stop().then((ignore) => {
+			  	// do something when code is read 
+		  		html5QrCode.stop().then((ignore) => {
 					// QR Code scanning is stopped.
 			  		setScanResult(decodedText);
 				}).catch((err) => {
