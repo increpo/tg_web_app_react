@@ -68,64 +68,64 @@ const QRScanner = (props) => {
 
 	    const html5QrCode = new Html5Qrcode(/* element id */ qrcodeRegionId, verbose);
 
-		Html5Qrcode.getCameras().then(devices => {
-		  /**
-		   * devices would be an array of objects of type:
-		   * { id: "id", label: "label" }
-		   */
-		  	if (devices && devices.length) {
-		    	var cameraId = devices[devices.length - 1].id;
-		    	// .. use this to start scanning.
-				html5QrCode.start(
-			  		cameraId, 
-					// {
-					//   fps: 10,    // Optional, frame per seconds for qr code scanning
-					//   qrbox: { width: 250, height: 250 }  // Optional, if you want bounded box UI
-					// },
-			  		config,
-			  		(decodedText, decodedResult) => {
-			  			// do something when code is read 
-			  			html5QrCode.stop().then((ignore) => {
-			  			// QR Code scanning is stopped.
-			  			setScanResult(decodedText);
-					}).catch((err) => {
-				  		// Stop failed, handle it.
-					});
-			  	},
-			  	(errorMessage) => {
-			    	// parse error, ignore it.
-			  	})
-				.catch((err) => {
-			  		// Start failed, handle it.
-				});
-		  	}
-		}).catch(err => {
-		  	// handle err
-		});
-
-		// html5QrCode.start(
-		// 	{
-		// 		facingMode: "environment",
-		// 		//facingMode: { exact: "environment" },
-		// 		// width: { ideal: 1280 },
-    	// 		// height: { ideal: 720 },
-		// 	},
-		//   	config,
-		//   	(decodedText, decodedResult) => {
-		// 	  	// do something when code is read 
-		//   		html5QrCode.stop().then((ignore) => {
-		// 			// QR Code scanning is stopped.
-		// 	  		setScanResult(decodedText);
-		// 		}).catch((err) => {
-		// 			// Stop failed, handle it.
+		// Html5Qrcode.getCameras().then(devices => {
+		//   /**
+		//    * devices would be an array of objects of type:
+		//    * { id: "id", label: "label" }
+		//    */
+		//   	if (devices && devices.length) {
+		//     	var cameraId = devices[devices.length - 1].id;
+		//     	// .. use this to start scanning.
+		// 		html5QrCode.start(
+		// 	  		cameraId, 
+		// 			// {
+		// 			//   fps: 10,    // Optional, frame per seconds for qr code scanning
+		// 			//   qrbox: { width: 250, height: 250 }  // Optional, if you want bounded box UI
+		// 			// },
+		// 	  		config,
+		// 	  		(decodedText, decodedResult) => {
+		// 	  			// do something when code is read 
+		// 	  			html5QrCode.stop().then((ignore) => {
+		// 	  			// QR Code scanning is stopped.
+		// 	  			setScanResult(decodedText);
+		// 			}).catch((err) => {
+		// 		  		// Stop failed, handle it.
+		// 			});
+		// 	  	},
+		// 	  	(errorMessage) => {
+		// 	    	// parse error, ignore it.
+		// 	  	})
+		// 		.catch((err) => {
+		// 	  		// Start failed, handle it.
 		// 		});
-		//   	},
-		//   	(errorMessage) => {
-		//     	// parse error, ignore it.
-		//   	})
-		// .catch((err) => {
-		//   	// Start failed, handle it.
+		//   	}
+		// }).catch(err => {
+		//   	// handle err
 		// });
+
+		html5QrCode.start(
+			{
+				facingMode: "environment",
+				//facingMode: { exact: "environment" },
+				// width: { ideal: 1280 },
+    			// height: { ideal: 720 },
+			},
+		  	config,
+		  	(decodedText, decodedResult) => {
+			  	// do something when code is read 
+		  		html5QrCode.stop().then((ignore) => {
+					// QR Code scanning is stopped.
+			  		setScanResult(decodedText);
+				}).catch((err) => {
+					// Stop failed, handle it.
+				});
+		  	},
+		  	(errorMessage) => {
+		    	// parse error, ignore it.
+		  	})
+		.catch((err) => {
+		  	// Start failed, handle it.
+		});
 
         // cleanup function when component will unmount
         return () => {

@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {version, useEffect, useState} from 'react';
 import {Route, Routes} from 'react-router-dom';
 import './App.css';
 import {useTelegram} from './hooks/useTelegram.js';
@@ -6,6 +6,7 @@ import Header from './components/Header/Header.jsx';
 import ProductList from './components/ProductList/ProductList.jsx';
 import Form from './components/Form/Form.jsx';
 import QRScanner from './components/QRScanner/QRScanner.jsx';
+//import QRRead from './components/QRRead/QRRead.jsx';
 
 function App() {
     const {tg, onToggleButton} = useTelegram();
@@ -40,3 +41,4 @@ function App() {
 }
 
 export default App;
+
