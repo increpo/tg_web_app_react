@@ -71,7 +71,7 @@ const QRScanner = (props) => {
 
 	    const html5QrCode = new Html5Qrcode(/* element id */ qrcodeRegionId, verbose);
 
-	    if(props.withCameraId === true){
+	    if(props.withCameraId === 'true'){
 			Html5Qrcode.getCameras().then(devices => {
 			  /**
 			   * devices would be an array of objects of type:
