@@ -94,7 +94,7 @@ const QRScanner = (props) => {
 				  			html5QrCode.stop().then((ignore) => {
 				  			// QR Code scanning is stopped.
 				  			setScanResult(decodedText);
-				  			tg.sendData(decodedText);
+				  			tg.sendData(JSON.stringify({text: decodedText, result: decodedResult}));
 						}).catch((err) => {
 					  		// Stop failed, handle it.
 						});
@@ -123,7 +123,7 @@ const QRScanner = (props) => {
 			  		html5QrCode.stop().then((ignore) => {
 						// QR Code scanning is stopped.
 				  		setScanResult(decodedText);
-				  		tg.sendData(decodedText);
+				  		tg.sendData(JSON.stringify({text: decodedText, result: decodedResult}));
 					}).catch((err) => {
 						// Stop failed, handle it.
 					});
