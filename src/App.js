@@ -16,6 +16,7 @@ function App() {
 
     const onNewScanResult = (decodedText, decodedResult) => {
         // handle decoded results here
+        tg.sendData(decodedText);
         console.log(decodedText);
     };
 
