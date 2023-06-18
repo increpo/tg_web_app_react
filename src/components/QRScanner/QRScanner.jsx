@@ -105,8 +105,8 @@ const QRScanner = (props) => {
 
 		html5QrCode.start(
 			{
-				facingMode: "environment",
-				//facingMode: { exact: "environment" },
+				//facingMode: "environment",
+				facingMode: { exact: "environment" },
 				// width: { ideal: 1280 },
     			// height: { ideal: 720 },
 			},
