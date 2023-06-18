@@ -73,14 +73,15 @@ const QRScanner = (props) => {
 		//     // .. use this to start scanning.
 		// 	html5QrCode.start(
 		// 	  cameraId, 
-		// 	  {
-		// 	    fps: 10,    // Optional, frame per seconds for qr code scanning
-		// 	    qrbox: { width: 250, height: 250 }  // Optional, if you want bounded box UI
-		// 	  },
+		// 	  // {
+		// 	  //   fps: 10,    // Optional, frame per seconds for qr code scanning
+		// 	  //   qrbox: { width: 250, height: 250 }  // Optional, if you want bounded box UI
+		// 	  // },
+		// 	  config,
 		// 	  (decodedText, decodedResult) => {
 		// 	  	// do something when code is read 
 		// 	  	html5QrCode.stop().then((ignore) => {
-		// 		  // QR Code scanning is stopped.
+		// 		  	// QR Code scanning is stopped.
 		// 	  		setScanResult(decodedText);
 		// 		}).catch((err) => {
 		// 		  // Stop failed, handle it.
@@ -100,7 +101,9 @@ const QRScanner = (props) => {
 		html5QrCode.start(
 			{
 				facingMode: "environment",
-				width: { min: 1280 },
+				//facingMode: { exact: "environment" },
+				// width: { ideal: 1280 },
+    			// height: { ideal: 720 },
 			},
 		  	config,
 		  	(decodedText, decodedResult) => {
