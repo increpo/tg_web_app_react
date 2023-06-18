@@ -40,7 +40,7 @@ const QRScanner = (props) => {
 
 	    const onCodeSuccessCallback = (decodedText, decodedResult) => {
 	    	// handle decoded results here
-	    	html5QrcodeScanner.clear()
+	    	//html5QrcodeScanner.clear();
 	        setScanResult(decodedText);
 	        // tg.sendData(decodedText);
 	        // console.log(decodedText);

@@ -14,6 +14,15 @@ function App() {
         tg.ready();
     }, []);
 
+    // const [scanResult, setScanResult] = useState(null);
+
+    // const onNewScanResult = (decodedText, decodedResult) => {
+    //     setScanResult(decodedText);
+    //     // handle decoded results here
+    //     // tg.sendData(decodedText);
+    //     // console.log(decodedText);
+    // };
+
     return (
         <div className="App">
             <Header />
@@ -21,6 +30,7 @@ function App() {
                 fps={10}
                 qrbox={250}
                 disableFlip={false}
+                // qrCodeSuccessCallback={onNewScanResult}
             />
             <Routes>
                 <Route index element={<ProductList />}/>
