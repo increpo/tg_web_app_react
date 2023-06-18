@@ -33,7 +33,10 @@ const QRScanner = (props) => {
       		// Only support camera scan type.
         	supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
         	facingMode: "environment",
-        	videoConstraints: { facingMode: { exact: "environment" } },
+        	videoConstraints: {
+        		width: { min: 1280 },
+    			height: { min: 720 }
+			},
     	}
         const config = createConfig({...props, ...settings});
         const verbose = props.verbose === true;
