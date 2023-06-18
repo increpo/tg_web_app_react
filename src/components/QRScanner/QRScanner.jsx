@@ -37,6 +37,9 @@ const QRScanner = (props) => {
         		width: { min: 1280 },
     			height: { min: 720 }
 			},
+			fps: 10,
+            qrbox: 250,
+            disableFlip: false,
 			//aspectRatio: 1.777778,
 			//disableFlip: true,
     	}

@@ -27,14 +27,16 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <QRScanner
-                fps={10}
-                qrbox={250}
-                disableFlip={false}
-            />
+            // <QRScanner
+            //     fps={10}
+            //     qrbox={250}
+            //     disableFlip={false}
+            // />
             <Routes>
-                <Route index element={<ProductList />}/>
-                <Route path={'form'} element={<Form />}/>
+                // <Route index element={<ProductList />}/>
+                // <Route path={'form'} element={<Form />}/>
+                <Route index element={<QRScanner />}/>
+                <Route path={'form'} element={<QRScanner />}/>
             </Routes>
         </div>
     );
