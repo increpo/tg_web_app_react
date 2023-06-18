@@ -14,15 +14,6 @@ function App() {
         tg.ready();
     }, []);
 
-    const [scanResult, setScanResult] = useState(null);
-
-    const onNewScanResult = (decodedText, decodedResult) => {
-        setScanResult(decodedText);
-        // handle decoded results here
-        // tg.sendData(decodedText);
-        // console.log(decodedText);
-    };
-
     return (
         <div className="App">
             <Header />
@@ -30,12 +21,7 @@ function App() {
                 fps={10}
                 qrbox={250}
                 disableFlip={false}
-                qrCodeSuccessCallback={onNewScanResult}
             />
-            { scanResult
-                ? <div><a href={scanResult}>Click me</a>{scanResult}</div>
-                : <div id="qr_scanner_render"></div>
-            }
             <Routes>
                 <Route index element={<ProductList />}/>
                 <Route path={'form'} element={<Form />}/>
