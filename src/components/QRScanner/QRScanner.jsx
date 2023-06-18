@@ -37,7 +37,7 @@ const QRScanner = (props) => {
         		width: { min: 1280 },
     			height: { min: 720 }
 			},
-			aspectRatio: 1.777778,
+			//aspectRatio: 1.777778,
 			disableFlip: true,
     	}
         const config = createConfig({...props, ...settings});
