@@ -24,19 +24,26 @@ function App() {
     //     // console.log(decodedText);
     // };
 
+    // return (
+    //     <div className="App">
+    //         <Header />
+    //         <QRScanner
+    //             fps={10}
+    //             qrbox={250}
+    //             disableFlip={false}
+    //         />
+    //         <Routes>
+    //             <Route index element={<ProductList />}/>
+    //             <Route path={'form'} element={<Form />}/>
+    //         </Routes>
+    //     </div>
+    // );
     return (
         <div className="App">
             <Header />
-            // <QRScanner
-            //     fps={10}
-            //     qrbox={250}
-            //     disableFlip={false}
-            // />
             <Routes>
-                // <Route index element={<ProductList />}/>
-                // <Route path={'form'} element={<Form />}/>
                 <Route index element={<QRScanner />}/>
-                <Route path={'form'} element={<QRScanner />}/>
+                <Route path={'form'} element={<QRScanner withCameraId='true' />}/>
             </Routes>
         </div>
     );
