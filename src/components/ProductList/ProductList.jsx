@@ -30,13 +30,13 @@ const ProductList = () => {
 			totalPrice: getTotalPrice(addedItems),
 			queryId
 		}
-		// fetch('http://94.158.61.52:8000/web-data', {
-		// 	method: 'POST',
-		// 	headers: {
-		// 		'Content-Type': 'Application/json'
-		// 	},
-		// 	body: JSON.stringify(data)
-		// })
+		fetch('http://94.158.61.52:8000/web-data', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'Application/json'
+			},
+			body: JSON.stringify(data)
+		})
 		tg.sendData(JSON.stringify(data));
 	}, [addedItems]);
 
