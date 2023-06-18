@@ -31,9 +31,9 @@ const QRScanner = (props) => {
       	const settings = {
       		rememberLastUsedCamera: true,
       		// Only support camera scan type.
-        	supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
-        	facingMode: "environment",
-        	videoConstraints: { facingMode: { exact: "environment" } },
+        	// supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
+        	// facingMode: "environment",
+        	// videoConstraints: { facingMode: { exact: "environment" } },
     	}
         const config = createConfig({...props, ...settings});
         const verbose = props.verbose === true;
