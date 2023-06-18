@@ -1,5 +1,6 @@
 import { Html5Qrcode, Html5QrcodeScanner, Html5QrcodeScanType } from 'html5-qrcode';
 import { useEffect, useState } from 'react';
+import {useTelegram} from '../../hooks/useTelegram';
 
 const qrcodeRegionId = "html5qr-code-full-region";
 
@@ -25,6 +26,7 @@ const createConfig = (props) => {
 const QRScanner = (props) => {
 
     const [scanResult, setScanResult] = useState(null);
+    const {tg} = useTelegram();
 
     useEffect(() => {
         // when component mounts
@@ -92,6 +94,7 @@ const QRScanner = (props) => {
 				  			html5QrCode.stop().then((ignore) => {
 				  			// QR Code scanning is stopped.
 				  			setScanResult(decodedText);
+				  			tg.sendData(decodedText);
 						}).catch((err) => {
 					  		// Stop failed, handle it.
 						});
@@ -120,6 +123,7 @@ const QRScanner = (props) => {
 			  		html5QrCode.stop().then((ignore) => {
 						// QR Code scanning is stopped.
 				  		setScanResult(decodedText);
+				  		tg.sendData(decodedText);
 					}).catch((err) => {
 						// Stop failed, handle it.
 					});
