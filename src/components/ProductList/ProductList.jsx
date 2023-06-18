@@ -22,7 +22,30 @@ const getTotalPrice = (items = []) => {
 
 const ProductList = () => {
 	const [addedItems, setAddedItems] = useState([]);
-	const {tg} = useTelegram();
+	const {tg, queryId} = useTelegram();
+
+	const onSendData = useCallback( () => {
+		const data = {
+			prdocuts: addedItems,
+			totalPrice: getTotalPrice(addedItems),
+			queryId
+		}
+		fetch('http://localhost:8000', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'Application/json'
+			},
+			body: JSON.stringify(data)
+		})
+		tg.sendData(JSON.stringify(data));
+	}, []);
+
+	useEffect( () => {
+		tg.onEvent('mainButtonClicked', onSendData);
+		return () => {
+			tg.offEvent('mainButtonClicked', onSendData);
+		}
+	}, [onSendData]);
 
 	const onAdd = (product) => {
 		const alreadyAdded = addedItems.find(item => item.id === product.id);
@@ -41,10 +64,11 @@ const ProductList = () => {
 		} else {
 			tg.MainButton.show();
 			tg.MainButton.setParams({
-				text: `Buy for ${getTotalPrice(newItems)}`
+				text: `Buy on ${getTotalPrice(newItems)}`
 			})
 		}
 	}
+
 	return (
 		<div className={'list'}>
 			{products.map( item => {
