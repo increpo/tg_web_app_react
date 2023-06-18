@@ -38,7 +38,7 @@ const QRScanner = (props) => {
         // html5QrcodeScanner.render(props.qrCodeSuccessCallback, props.qrCodeErrorCallback);
         html5QrcodeScanner.render(onCodeSuccessCallback, onCodeErrorCallback);
 
-	    const onCodeSuccessCallback = (decodedText, decodedResult) => {
+	    const onCodeSuccessCallback = ({decodedText, decodedResult}) => {
 	    	// handle decoded results here
 	    	//html5QrcodeScanner.clear();
 	        setScanResult(decodedText);
