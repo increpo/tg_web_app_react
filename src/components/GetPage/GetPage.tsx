@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC } from "react";
 import BackBtn from "../common/BackBtn/BackBtn";
 import style from './GetPage.module.scss';
 
@@ -17,7 +17,7 @@ const GetPage: FC = () => {
       <div className={style.content}>
         <div className={style.title}>Show this code for crediting coins</div>
         <div className={style.qr}>
-          <QRCode
+{/*          <QRCode
               value={qrUrl}            // here you should keep the link/value(string) for which you are generation promocode
               size={250}              // the dimension of the QR code (number)
               logoImage={imageUrl}  // URL of the logo you want to use, make sure it is a dynamic url
@@ -29,7 +29,7 @@ const GetPage: FC = () => {
               qrStyle="squares"          // type of qr code, wether you want dotted ones or the square ones (dots / squares)
               eyeRadius={3}          // radius of the promocode eye
               id={"logo_id"}
-          />
+          />*/}
           {/*<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="250" height="250" fill="white" />
             <path d="M17.2414 17.2412H25.8621V25.8619H17.2414V17.2412Z" fill="black" />
