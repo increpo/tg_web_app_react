@@ -1,5 +1,5 @@
 .wrap {
-  // background: #171717;
+  background: #171717;
   padding: 20px 0;
   margin-left: -16px;
   margin-right: -16px;
@@ -21,6 +21,14 @@
 .title {
   font-size: 16px;
   color: var(--tg-theme-text-color);
+  /* Show this code for crediting coins */
+  width: 258px;
+  height: 19px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .qr {
@@ -67,5 +75,21 @@
 
   svg path {
     fill: var(--tg-theme-button-text-color);
+  }
+}
+
+  
+
+.clipboardBtn{
+  /* Rectangle 31 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 52px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  .clipboardBtnText{
+    margin-left: 15px;
   }
 }

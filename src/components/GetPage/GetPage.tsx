@@ -1,8 +1,12 @@
-import { FC } from "react";
+import React, { FC, useState } from "react";
 import BackBtn from "../common/BackBtn/BackBtn";
 import style from './GetPage.module.scss';
 
+import { QRCode } from 'react-qrcode-logo';
 const GetPage: FC = () => {
+  const qrUrl = 'https://makeshop.pro/';
+  const imageUrl = '../images/logo_qr.png';
+  const clipboardIcon = '../images/clipboard_icon.png';
 
   return (
     <div className={style.wrap}>
@@ -13,7 +17,20 @@ const GetPage: FC = () => {
       <div className={style.content}>
         <div className={style.title}>Show this code for crediting coins</div>
         <div className={style.qr}>
-          <svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <QRCode
+              value={qrUrl}            // here you should keep the link/value(string) for which you are generation promocode
+              size={250}              // the dimension of the QR code (number)
+              logoImage={imageUrl}  // URL of the logo you want to use, make sure it is a dynamic url
+              logoHeight={50}
+              logoWidth={50}
+              logoOpacity={1}
+              removeQrCodeBehindLogo={true}
+              enableCORS={true}       // enabling CORS, this is the thing that will bypass that DOM check
+              qrStyle="squares"          // type of qr code, wether you want dotted ones or the square ones (dots / squares)
+              eyeRadius={3}          // radius of the promocode eye
+              id={"logo_id"}
+          />
+          {/*<svg width="250" height="250" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="250" height="250" fill="white" />
             <path d="M17.2414 17.2412H25.8621V25.8619H17.2414V17.2412Z" fill="black" />
             <path d="M25.8621 17.2412H34.4828V25.8619H25.8621V17.2412Z" fill="black" />
@@ -319,7 +336,7 @@ const GetPage: FC = () => {
             <g mask="url(#mask0_284_1273)">
               <path d="M124.594 122.219C124.531 125.74 124.5 128.578 124.5 130.734C124.5 131.818 124.661 132.568 124.984 132.984C125.307 133.391 125.922 133.594 126.828 133.594C127.547 133.594 128.484 133.5 129.641 133.312L129.734 134.016C127.932 134.922 126.323 135.375 124.906 135.375C123.771 135.375 122.927 135.073 122.375 134.469C121.823 133.854 121.547 132.932 121.547 131.703C121.547 129.682 121.583 126.49 121.656 122.125L119.5 121.594L119.406 120.953L121.812 120.75L122.891 116.969C123.474 116.812 124.005 116.661 124.484 116.516L124.641 116.625C124.609 117.885 124.594 119.062 124.594 120.156V120.734H129.297V122.219H124.594Z" fill="white" />
             </g>
-          </svg>
+          </svg>*/}
         </div>
         <div className={style.address}>352 - 628</div>
         <div className={style.footer}>
