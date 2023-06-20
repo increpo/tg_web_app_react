@@ -5,17 +5,12 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  color: var(--tg-theme-text-color);
-
-  svg path {
-    stroke: var(--tg-theme-text-color);
-  }
 }
 
 .btn.invers {
-  color: var(--tg-theme-text-color);;
+  color: #fff;
 
   svg path{
-    stroke: var(--tg-theme-text-color);;
+    stroke: #fff;
   }
 }

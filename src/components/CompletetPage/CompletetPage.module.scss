@@ -20,25 +20,21 @@
   margin-bottom: 30px;
   font-weight: 500;
   font-size: 14px;
-  color: var(--tg-theme-text-color);
+  color: #696969;
 }
 
 .amount {
   margin-bottom: 8px;
   font-weight: 600;
   font-size: 24px;
-  color: var(--tg-theme-text-color);
+  color: #000000;
 }
 
 .amount_in_fiat {
   margin-bottom: 30px;
   font-size: 12px;
   letter-spacing: -0.408px;
-  color: var(--tg-theme-text-color);
-}
-
-.commentary {
-  color: var(--tg-theme-hint-color);
+  color: #696969;
 }
 
 .footer {
@@ -47,7 +43,7 @@
   justify-content: center;
   margin-left: -16px;
   margin-right: -16px;
-  background: var(--tg-theme-bg-color);
+  background: #F2F5FC;
   padding: 40px 0;
   margin-bottom: 32px;
 
@@ -55,7 +51,7 @@
     font-size: 12px;
     line-height: 15px;
     text-align: center;
-    color: var(--tg-theme-text-color);
+    color: #000000;
     max-width: 268px;
   }
 }
@@ -65,11 +61,11 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: var(--tg-theme-button-color);
+  background: #037EE5;
   border-radius: 8px;
   font-weight: 500;
   font-size: 18px;
-  color: var(--tg-theme-button-text-color);
+  color: #FFFFFF;
   border: none;
   height: 56px;
 }

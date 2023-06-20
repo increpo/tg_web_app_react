@@ -23,7 +23,7 @@
 label {
   margin-bottom: 10px;
   font-size: 14px;
-  color: var(--tg-theme-text-color);
+  color: #000000;
 }
 
 input {
@@ -57,13 +57,13 @@ input {
   right: 10px;
   bottom: 23px;
   font-size: 12px;
-  color: var(--tg-theme-text-color);
+  color: #000000;
 }
 
 .commentary {
   font-size: 12px;
   letter-spacing: -0.408px;
-  color: var(--tg-theme-hint-color);
+  color: #696969;
 }
 
 .btn {
@@ -71,11 +71,11 @@ input {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: var(--tg-theme-button-color);
+  background: #037EE5;
   border-radius: 8px;
   font-weight: 500;
   font-size: 18px;
-  color: var(--tg-theme-button-text-color);
+  color: #FFFFFF;
   border: none;
   height: 56px;
 }

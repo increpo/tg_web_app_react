@@ -8,8 +8,6 @@ import ScanQRPage from './components/ScanQRPage/ScanQRPage';
 import RequestDebitingPage from './components/RequestDebitingPage/RequestDebitingPage';
 import CompletetPage from './components/CompletetPage/CompletetPage';
 
-// const tg = Window.Telegram.WebApp;
-
 function App() {
   return (
     <div className="App">
