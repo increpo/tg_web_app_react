@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0 48px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--tg-theme-text-color);
+}
+
+.amount {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--tg-theme-text-color);
+}
+
+.amount_in_fiat {
+  margin-bottom: 30px;
+  font-size: 12px;
+  letter-spacing: -0.408px;
+  color: var(--tg-theme-text-color);
+}
+
+.commentary {
+  color: var(--tg-theme-hint-color);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -16px;
+  margin-right: -16px;
+  background: var(--tg-theme-bg-color);
+  padding: 40px 0;
+  margin-bottom: 32px;
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: var(--tg-theme-text-color);
+    max-width: 268px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: var(--tg-theme-button-color);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--tg-theme-button-text-color);
+  border: none;
+  height: 56px;
+}

@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--tg-theme-text-color);
+}
+
+.count {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--tg-theme-text-color);
+}
+
+.count_in_fiat {
+  font-size: 12px;
+  color: var(--tg-theme-text-color);
+}

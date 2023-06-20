@@ -1,0 +1,102 @@
+.wrap {
+  background: #171717;
+  padding: 20px 0;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.header{
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 270px;
+  margin: 0 auto;
+  padding: 36px 0;
+
+  & > div + div {
+    margin-top: 20px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  /* Show this code for crediting coins */
+  width: 258px;
+  height: 19px;
+  text-align: center;
+
+  //font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #FFFFFF;//var(--tg-theme-text-color);
+}
+
+.qr {
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  background: white;//var(--tg-theme-button-color);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--tg-theme-button-text-color);
+}
+
+.footer {
+  display: flex;
+  gap: 18px;
+  width: 100%;
+
+  // & > div {
+  //   width: 50%;
+  // }
+}
+
+.share,
+.copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 52px;
+  background: var(--tg-theme-button-color);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--tg-theme-button-text-color);
+
+  svg path {
+    fill: var(--tg-theme-button-text-color);
+  }
+}
+
+.clipboardBtn{
+  /* Rectangle 31 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 52px;
+
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  .clipboardBtnText{
+    margin-left: 15px;
+  }
+}
