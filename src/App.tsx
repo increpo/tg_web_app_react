@@ -8,6 +8,8 @@ import ScanQRPage from './components/ScanQRPage/ScanQRPage';
 import RequestDebitingPage from './components/RequestDebitingPage/RequestDebitingPage';
 import CompletetPage from './components/CompletetPage/CompletetPage';
 
+import QRScanner from './components/QRScanner/QRScanner.jsx';
+
 // const tg = Window.Telegram.WebApp;
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Route path="/spendpage/scanqr" element={<ScanQRPage/>} />
         <Route path="/spendpage/requestdebiting" element={<RequestDebitingPage/>} />
         <Route path="/complete" element={<CompletetPage/>} />
+        <Route path="/form" element={<QRScanner withCameraId='true' />}/>
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>
     </div>
