@@ -54,19 +54,19 @@ const QRScanner = (props) => {
         //const html5QrcodeScanner = new Html5QrcodeScanner(qrcodeRegionId, config, verbose);
         // html5QrcodeScanner.render(props.qrCodeSuccessCallback, props.qrCodeErrorCallback);
 
-	    const onCodeSuccessCallback = (decodedText, decodedResult) => {
-	    //const onCodeSuccessCallback = (result) => {
-	    	// handle decoded results here
-	    	html5QrcodeScanner.clear();
-	        setScanResult(decodedText);
-	        //setScanResult(JSON.stringify(result));
-	        // tg.sendData(decodedText);
-	        // console.log(decodedText);
-	    };
+	    // const onCodeSuccessCallback = (decodedText, decodedResult) => {
+	    // //const onCodeSuccessCallback = (result) => {
+	    // 	// handle decoded results here
+	    // 	html5QrcodeScanner.clear();
+	    //     setScanResult(decodedText);
+	    //     //setScanResult(JSON.stringify(result));
+	    //     // tg.sendData(decodedText);
+	    //     // console.log(decodedText);
+	    // };
 
-	    const onCodeErrorCallback = (e) => {
-	        console.log(e);
-	    };
+	    // const onCodeErrorCallback = (e) => {
+	    //     console.log(e);
+	    // };
 
 
         //html5QrcodeScanner.render(onCodeSuccessCallback, onCodeErrorCallback);
