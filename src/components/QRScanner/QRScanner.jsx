@@ -147,7 +147,7 @@ const QRScanner = (props) => {
 			//   // Stop failed, handle it.
 			// });
         };
-    }, []);
+    }, [props, tg]);
 
     return (
     	<div>
