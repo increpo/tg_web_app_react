@@ -1,4 +1,4 @@
-import { Html5Qrcode, Html5QrcodeScanner, Html5QrcodeScanType } from 'html5-qrcode';
+import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode';
 import { useEffect, useState } from 'react';
 import {useTelegram} from '../../hooks/useTelegram';
 
