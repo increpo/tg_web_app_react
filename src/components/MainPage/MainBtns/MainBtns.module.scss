@@ -8,12 +8,16 @@
   text-align: center;
   width: 33.3%;
   border-color: transparent;
-  background: #F2F5FC;
+  background: var(--tg-theme-button-color);
   border-radius: 8px;
   font-size: 12px;
   line-height: 15px;
-  color: #037EE5;
+  color: var(--tg-theme-button-text-color);
   cursor: pointer;
   padding: 12px 0 8px;
   text-decoration: none;
+
+  svg path {
+    fill: var(--tg-theme-button-text-color);
+  }
 }

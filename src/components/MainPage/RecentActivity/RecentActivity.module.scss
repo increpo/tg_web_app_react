@@ -7,7 +7,7 @@
   align-items: center;
   gap: 12px;
   font-size: 18px;
-  color: #000000;
+  color: var(--tg-theme-text-color);
 
   &:after {
     content: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6L5 2L9 6' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");

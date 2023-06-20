@@ -8,9 +8,9 @@
 }
 
 .btn.invers {
-  color: #fff;
+  color: var(--tg-theme-button-text-color);
 
   svg path{
-    stroke: #fff;
+    stroke: var(--tg-theme-button-text-color);
   }
 }

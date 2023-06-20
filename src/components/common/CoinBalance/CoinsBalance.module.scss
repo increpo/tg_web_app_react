@@ -14,10 +14,10 @@
 .count {
   font-weight: 600;
   font-size: 24px;
-  color: #000000;
+  color: var(--tg-theme-text-color);
 }
 
 .count_in_fiat {
   font-size: 12px;
-  color: #000000;
+  color: var(--tg-theme-text-color);
 }
