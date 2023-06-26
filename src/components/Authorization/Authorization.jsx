@@ -11,7 +11,7 @@ const Authorization = () => {
     useEffect(() => {
         const handleTelegramResponse = response => {
             tg.sendData(response);
-            setScanResult(response);
+            setResult(response);
             //console.log(response);
         };
 
