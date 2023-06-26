@@ -4,7 +4,7 @@ import {useTelegram} from '../../hooks/useTelegram';
  
 const Authorization = () => {
     const handleTelegramResponse = response => {
-        tg.sendData(JSON.stringify(response));
+        tg.sendData(response);
         //console.log(response);
     };
     const {tg} = useTelegram();
