@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import TelegramLoginButton from 'react-telegram-login';
  
 const Authorization = () => {
