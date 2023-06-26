@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import TelegramLoginButton from 'react-telegram-login';
 import {useTelegram} from '../../hooks/useTelegram';
  
