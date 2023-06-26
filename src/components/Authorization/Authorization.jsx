@@ -7,7 +7,7 @@ const Authorization = () => {
     };
 
     return (
-        <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="OdauBot" />
+        <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="TravelingoDev" />
     )
 }
 
