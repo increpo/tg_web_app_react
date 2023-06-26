@@ -1,26 +1,23 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import TelegramLoginButton from 'react-telegram-login';
 import {useTelegram} from '../../hooks/useTelegram';
  
 const Authorization = () => {
 
     const {tg} = useTelegram();
-    const [result, setResult] = useState(null);
+    const [resultData, setResultData] = useState(null);
 
-    //useEffect(() => {
-        const handleTelegramResponse = response => {
-            setResult(JSON.stringify({response: response}));
-            tg.sendData(JSON.stringify({response: response}));
-            //console.log(response);
-        };
-
-    //}, [tg]);
+    const handleTelegramResponse = response => {
+        setResultData(JSON.stringify({response: response}));
+        tg.sendData(JSON.stringify({response: response}));
+        //console.log(response);
+    };
 
     return (
         <div>
             <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="TravelingoDevBot" />
-            <div>{result}</div>
+            <div>{resultData}</div>
         </div>
     )
 }
