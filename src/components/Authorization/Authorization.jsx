@@ -3,14 +3,24 @@ import TelegramLoginButton from 'react-telegram-login';
 import {useTelegram} from '../../hooks/useTelegram';
  
 const Authorization = () => {
-    const handleTelegramResponse = response => {
-        tg.sendData(response);
-        //console.log(response);
-    };
+
     const {tg} = useTelegram();
+    const [result, setResult] = useState(null);
+
+    useEffect(() => {
+        const handleTelegramResponse = response => {
+            tg.sendData(response);
+            setScanResult(response);
+            //console.log(response);
+        };
+
+    }, [tg]);
 
     return (
-        <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="TravelingoDevBot" />
+        <div>
+            <TelegramLoginButton dataOnauth={handleTelegramResponse} botName="TravelingoDevBot" />
+            <div>{result}</div>
+        </div>
     )
 }
 
