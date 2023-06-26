@@ -10,8 +10,8 @@ const Authorization = () => {
 
     useEffect(() => {
         const handleTelegramResponse = response => {
-            tg.sendData(response);
-            setResult(response);
+            setResult(JSON.stringify({response: response}));
+            tg.sendData(JSON.stringify({response: response}));
             //console.log(response);
         };
 
