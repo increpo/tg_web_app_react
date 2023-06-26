@@ -8,14 +8,14 @@ const Authorization = () => {
     const {tg} = useTelegram();
     const [result, setResult] = useState(null);
 
-    useEffect(() => {
+    //useEffect(() => {
         const handleTelegramResponse = response => {
             setResult(JSON.stringify({response: response}));
             tg.sendData(JSON.stringify({response: response}));
             //console.log(response);
         };
 
-    }, [tg]);
+    //}, [tg]);
 
     return (
         <div>
