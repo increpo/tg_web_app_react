@@ -46,8 +46,8 @@ export default function CopyToClipboard({
       aria-label={buttonText}
       type="button"
       onClick={handleClick}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
+      //onMouseEnter={() => setHover(true)}
+      //onMouseLeave={() => setHover(false)}
       className={className}
     >
       <span
