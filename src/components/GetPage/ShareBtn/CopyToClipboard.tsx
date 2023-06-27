@@ -1,4 +1,5 @@
-import React, { CSSProperties, useState } from "react";
+//import React, { CSSProperties, useState } from "react";
+import React, { useState } from "react";
 import copy from "copy-to-clipboard";
 
 // const CopyToClipboardStyle: CSSProperties = {
