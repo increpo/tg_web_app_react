@@ -33,5 +33,19 @@
 .socialSharePopupMoveIn{
 	header{
 		display: none !important;
+		div{
+			display: none !important;
+		}
 	}
+}
+
+.react-responsive-modal-modal{
+	width: 100%;
+	vertical-align: bottom !important;
+	border-radius: 4px;
+}
+
+.social-buttons{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
