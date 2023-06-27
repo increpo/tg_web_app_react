@@ -1,21 +1,21 @@
 import React, { CSSProperties, useState } from "react";
 import copy from "copy-to-clipboard";
 
-const CopyToClipboardStyle: CSSProperties = {
-  background: "#dfe5f7",
-  color: "#252d43",
-  cursor: "pointer",
-  padding: "0.75rem",
-  margin: "0 1.25rem 1.25rem 1.25rem",
-  width: "calc(100% - 2.5rem)",
-  border: 0,
-  fontSize: "1rem",
-  borderRadius: "0.4rem",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  transition: "0.3s",
-};
+// const CopyToClipboardStyle: CSSProperties = {
+//   background: "#dfe5f7",
+//   color: "#252d43",
+//   cursor: "pointer",
+//   padding: "0.75rem",
+//   margin: "0 1.25rem 1.25rem 1.25rem",
+//   width: "calc(100% - 2.5rem)",
+//   border: 0,
+//   fontSize: "1rem",
+//   borderRadius: "0.4rem",
+//   display: "flex",
+//   alignItems: "center",
+//   justifyContent: "center",
+//   transition: "0.3s",
+// };
 
 interface CopyToClipboardProps {
   copyToClipboardText?: string;
@@ -31,7 +31,7 @@ export default function CopyToClipboard({
   className,
 }: CopyToClipboardProps) {
   const [buttonText, setButtonText] = useState<string | undefined>(copyToClipboardText);
-  const [hover, setHover] = useState<boolean | null>(null);
+  // const [hover, setHover] = useState<boolean | null>(null);
   const handleClick = () => {
     copy(link);
     setButtonText(copySuccessText);
