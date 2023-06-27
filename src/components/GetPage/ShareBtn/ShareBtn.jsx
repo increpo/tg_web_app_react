@@ -60,7 +60,7 @@ import './ShareBtn.scss';
 import React from "react";
 import ShareOnSocial from "react-share-on-social";
 
-const ShareBtn = ({shareLink}) => {
+const ShareBtn = ({shareLink, className}) => {
 
   	return (
 	    <ShareOnSocial
@@ -76,7 +76,7 @@ const ShareBtn = ({shareLink}) => {
 	      	//copySuccessText='Copied'					//The label of the copy to clipboard button after a successful copy.
 	      	//onSocialClick={() => null}				//A callback invoked when user clicks on any of the social media buttons in the fallback.
 	    >
-	      	<button className={'share-btn'}>
+	      	<button className={className}>
 	      		<span className={'share-btn-text'}>
 	      			Share
 	      		</span>
