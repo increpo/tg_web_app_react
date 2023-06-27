@@ -2,7 +2,7 @@ import { FC } from "react";
 import BackBtn from "../common/BackBtn/BackBtn";
 import ShareBtn from "./ShareBtn/ShareBtn.jsx";
 import style from './GetPage.module.scss';
-// import CopyToClipboard from "./ShareBtn/CopyToClipboard";
+import CopyToClipboard from "./ShareBtn/CopyToClipboard";
 
 import { QRCode } from 'react-qrcode-logo';
 const GetPage: FC = () => {
