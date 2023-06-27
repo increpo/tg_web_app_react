@@ -54,7 +54,7 @@ const ShareBtn = ({shareLink, className}) => {
 
   return (
     <div>
-      <button className={className} onClick={onOpenModal}>Open modal</button>
+      <button className={className} onClick={onOpenModal}>Share</button>
       <Modal
       	open={open}							//boolean		Control if the modal is open or not.
       	onClose={onCloseModal}				
