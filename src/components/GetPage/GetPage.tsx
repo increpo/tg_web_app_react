@@ -35,7 +35,7 @@ const GetPage: FC = () => {
         <div className={style.address}>352 - 628</div>
         <div className={style.footer}>
           <div className={style.share}>
-            <ShareBtn />
+            <ShareBtn shareLink={qrUrl}/>
             Share
           </div>
           <div className={style.copy}>
