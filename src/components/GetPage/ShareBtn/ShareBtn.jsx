@@ -39,8 +39,8 @@ import {
 } from 'react-share';
 
 
-import React, { useState, createElement } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
+// import ReactDOM from 'react-dom';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 
@@ -51,7 +51,6 @@ const ShareBtn = ({shareLink, className}) => {
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
-  const socialBtns = ['Facebook', 'Telegram', 'Twitter', 'Whatsapp'];
 
   return (
     <div>
